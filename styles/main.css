@@ -1,0 +1,138 @@
+:root {
+    --black: #11160D;
+    --white: #fdfdf7;
+    --lightGreen: #7EA172;
+    --darkGreen: #2A4D14;
+    --cream: #D2B48C;
+    
+}
+
+body{
+    background-color: var(--white);
+    margin: 0;
+}
+
+.active{
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 40% 1fr 1fr;
+    align-items: center;
+    background-color: black;
+}
+header nav{
+    grid-column: 1/6;
+    z-index: 1;
+    justify-self: center;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 3.5vw;
+    top: 2vw;
+}
+header img {
+    grid-column: 1/6;
+    grid-row: 2;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    opacity: 70%;
+}
+header h1 {
+    z-index: 1;
+    grid-column: 2/5;
+    grid-row: 2;
+    text-align: center;
+    color: white;
+    font-size: 7vw;
+}
+header>a{
+    position: relative;
+    top: 13vw;
+    z-index: 1;
+    grid-column: 3/4;
+    grid-row: 2;
+    text-align: center;
+    font-size: 3.5vw;
+    height: 5vw;
+    color: white;
+    background-color: var(--darkGreen);
+    border-radius: 1vw;
+    padding: 1vw;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 55vw;
+    align-items: center;
+    justify-items: center;
+}
+section img {
+    width: 85%;
+    border-radius: 1vw;
+    grid-column: 2/3;
+    grid-row: 1;
+}
+#registry img{
+    grid-column: 1/2;
+}
+section div {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 55%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lightGreen);
+    border-radius: 1vw;
+}
+section div h2{
+    margin: 0;
+}
+section div p{
+    margin: 0;
+}
+section div a{
+    margin: 0;
+}
+#rsvp {
+    height: auto;
+    background-color: var(--cream);
+    width: 88%;
+    border-radius: 1vw;
+    margin-bottom: 3vw;
+    padding: 2vw;
+}
+#rsvp h2 {
+    margin: 0;
+    grid-column: 1/3;
+    font-size: 10vw;
+}
+#rsvp p {
+    grid-column: 1/3;
+    font-size: 3vw;
+    margin: 1vw;
+}
+#rsvp a {
+    grid-column: 1/6;
+    background-color: var(--darkGreen);
+    padding: 2vw 8vw;
+    font-size: 4vw;
+    border-radius: 1vw;
+}
