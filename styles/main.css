@@ -11,8 +11,9 @@
     font-weight: 400;
     font-style: normal;
   }
-.chilanka-regular {
-    font-family: "Chilanka", cursive;
+.playwrite-gb-s {
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
@@ -64,7 +65,7 @@ header img {
     opacity: 70%;
 }
 header h1 {
-    margin-top: -8vw;
+    margin-top: -3vw;
     z-index: 1;
     grid-column: 2/5;
     grid-row: 2;
@@ -80,7 +81,7 @@ header>a{
     grid-row: 2;
     text-align: center;
     font-size: 5vw;
-    height: 5vw;
+    height: 7vw;
     color: white;
     background-color: var(--darkGreen);
     border-radius: 1vw;
@@ -116,7 +117,7 @@ footer a {
     color: var(--white);
     padding: 1vw;
     border-radius: 1vw;
-    width: 15vw;
+    width: 12vw;
 }
 
 main {
@@ -167,7 +168,7 @@ section div a{
     color: var(--white);
     padding: 1vw;
     text-align: center;
-    width: 18vw;
+    width: 22vw;
     margin: -1vw 0 0 0;
 }
 #rsvp {
