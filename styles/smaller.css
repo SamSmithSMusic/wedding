@@ -35,24 +35,28 @@
         top: 0;
         width: 100%;
         padding: 3vw;
-        background-color: var(--darkGreen);
+        background-color: var(--lightGreen);
         z-index: 0;
     }
     nav a {
         font-size: 8vw;
         width: 80%;
         padding: 2vw;
-        border: 1vw solid var(--cream);
+        border: 1vw solid var(--black);
         margin: 5px;
         min-height: 44px;
+        color: var(--white);
+        background-color: var(--darkGreen);
     }
 
     header h1 {
-        font-size: 7.1vw;
+        font-size: 12vw;
+        line-height: 11vw;
     }
     header a {
         min-height: 44px;
         font-size: 6.5vw;
+        padding: 1vw;
     }
     section div, section img, #registry img {
         grid-column: 1/3;
@@ -65,7 +69,12 @@
     }
     section div {
         padding: 2vw 0 4vw 0;
+        grid-row: 1;
     }
+    section img {
+        grid-row: 2;
+    }
+
     #rsvp {
         width: 85%;
         padding: 3vw 0 3vw 0;
