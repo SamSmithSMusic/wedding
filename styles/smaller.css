@@ -70,6 +70,7 @@
     section div {
         padding: 2vw 0 4vw 0;
         grid-row: 1;
+        height: 80vw;
     }
     section img {
         grid-row: 2;

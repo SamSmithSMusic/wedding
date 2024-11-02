@@ -62,7 +62,7 @@ header img {
     z-index: 0;
     width: 100%;
     height: auto;
-    opacity: 70%;
+    opacity: 45%;
 }
 header h1 {
     margin-top: -3vw;
@@ -72,6 +72,7 @@ header h1 {
     text-align: center;
     color: white;
     font-size: 11vw;
+    letter-spacing: -0.4vw;
 }
 header>a{
     position: relative;
@@ -129,14 +130,15 @@ main {
 section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 45vw;
+    height: auto;
     width: 100%;
     align-items: center;
     justify-items: center;
 }
 section img {
-    width: 85%;
+    width: 70%;
     border-radius: 1vw;
+    margin: 2vw 0 2vw 0;
     grid-column: 2/3;
     grid-row: 1;
 }
@@ -147,7 +149,7 @@ section div {
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 32vw;
+    height: 40vw;
     align-items: center;
     justify-content: space-evenly;
     background-color: var(--lightGreen);
