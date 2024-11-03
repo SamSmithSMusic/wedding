@@ -15,6 +15,7 @@ expand.addEventListener('click',() => {
 const mailing = document.querySelector(".mailing");
 let mailElements = document.querySelectorAll(".mailing input");
 const mailBox = document.querySelector("#physical");
+const galleryCard = document.querySelector("#gallery");
 
 window.addEventListener("load", () => {
     mailBox.checked = false;
@@ -27,11 +28,13 @@ mailBox.addEventListener('change',(event) => {
         mailElements.forEach(element => {
             element.setAttribute("required","true");
         });
+        galleryCard.setAttribute("style","display: grid");
     }
     else if(!isChecked){
         mailing.setAttribute("style","display:none");
         mailElements.forEach(element => {
             element.setAttribute("required","false");
         });
+        galleryCard.setAttribute("style","display: none");
     }
 })

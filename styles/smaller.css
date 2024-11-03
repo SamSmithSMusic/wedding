@@ -118,4 +118,43 @@
     footer {
         font-size: 3vw;
     }
+
+    /* Contact */
+    .contact {
+        flex-direction: column;
+    }
+    .contact form {
+        width: 90vw;
+    }
+
+    .contact legend {
+        font-size: 7vw;
+    }
+    .contact form :is(label, input) {
+        font-size: 6vw;
+    }
+    label:has(input[type="checkbox"]) {
+        font-size: 7vw;
+    }
+
+    .contact form input:required {
+        border-right: 2vw red solid;
+    }
+    .contact form input:valid {
+        border-right: 2vw green solid;
+    }
+    #stateInput {
+        width: 15vw;
+        font-size: 10vw;
+    }
+    #submitButton {
+        margin-top: 3vw;
+        height: 15vw;
+        border: none;
+        width: 90%;
+        font-size: 9vw;
+    }
+    .contact section div {
+        grid-row: 2;
+    }
 }
