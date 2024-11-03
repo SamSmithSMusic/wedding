@@ -38,3 +38,44 @@ mailBox.addEventListener('change',(event) => {
         galleryCard.setAttribute("style","display: none");
     }
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.querySelector('.contact form');
+    var url = form.action;
+    var page = document.querySelector('.contact');
+    var loading = document.querySelector('.loading');
+
+    form.addEventListener("submit", function(event) {
+        
+        loading.style.display = "block";
+
+        event.preventDefault();
+
+        // Honeypot check
+        var honeypot = form.querySelector("input[name='honeypot']").value;
+        if (honeypot) {
+            return; // Stop if honeypot is filled
+        }
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                form.reset();
+                form.style.display = "none"; // Hide form
+                page.setAttribute('style','flex-direction:column;');
+                var thankYouMessage = document.querySelector(".thankyou_message");
+                thankYouMessage.style.display = "block";
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+
+        // Collect and encode form data
+        var formData = new FormData(form);
+        var encoded = new URLSearchParams(formData).toString();
+        xhr.send(encoded);
+    });
+});

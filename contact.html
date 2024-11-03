@@ -34,6 +34,7 @@
                 <label>What Invitaions Would You Like?<br>(Select all that apply)</label>
                 <label><input type="checkbox" name="invites" id="digital" value="digital">Digital</label>
                 <label><input type="checkbox" name="invites" id="physical" value="physical">Physical</label>
+                <input type="text" name="honeypot" style="display:none;">
             </fieldset>
             <fieldset class="mailing">
               <legend>Mailing Address</legend>
@@ -95,8 +96,12 @@
               </datalist>
               <label>Zip Code<input name="zip" type="text" minlength="5" maxlength="5"></label>
             </fieldset>
+            <h3 class="loading">Processing Information...</h3>
             <input type="submit" id="submitButton" value="Request Invite">
         </form>
+        <div class="thankyou_message">
+          <h3>We'll have that invitation to you soon! Thank You!</h3>
+        </div>
         <aside>
           <section id="registry">
             <div>
