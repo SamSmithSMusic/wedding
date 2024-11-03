@@ -56,18 +56,13 @@ header nav{
     font-size: 3.5vw;
     top: 2vw;
 }
-header picture {
+header img {
     grid-column: 1/6;
     grid-row: 2;
     z-index: 0;
     width: 100%;
     height: auto;
     opacity: .45;
-}
-picture img {
-    display: block;
-    width: 100%;
-    height: auto;
 }
 header h1 {
     margin-top: -5vw;
