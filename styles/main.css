@@ -203,11 +203,33 @@ section div a{
 
 
 /* ---- Form Styles ----- */
+form {
+    width: 50%;
+}
+form legend {
+    font-size: 3.5vw;
+}
 form :is(label,input) {
     display: block;
+    min-height: 44px;
+    font-size: 3vw;
+    border: .5vw rgba(0, 0, 0, 0) solid;
+    box-sizing: border-box;
 }
+form :is(label,input):required {
+    border-right: 1vw red solid;
+}
+form :is(label,input):valid {
+    border-right: 1vw rgb(0, 162, 46) solid;
+}
+form input[type="submit"] {
+    border: none;
+}
+
 form input[type="checkbox"] {
     display: inline;
+    min-width: 44px;
+    border-radius: 1vw;
 }
 
 label:has(input[type="checkbox"]) {
@@ -217,7 +239,32 @@ label:has(input[type="checkbox"]) {
 form label {
     margin: 2vw 0 0 0;
 }
+form input {
+    margin-top: .5vw;
+    border-radius: 1vw;
+}
+#stateInput {
+    width: 6vw;
+}
 
 fieldset {
     padding-bottom: 2vw;
+}
+.mailing {
+    display: none;
+}
+#submitButton {
+    margin: 1vw auto 2vw auto;
+    background-color: var(--darkGreen);
+    width: 60%;
+    height: 8vw;
+    font-size: 4vw;
+}
+#submitButton {
+    text-decoration: none;
+    color: white;
+    transition: transform .2s;
+}
+#submitButton:hover {
+    transform: scale(1.1);
 }
