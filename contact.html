@@ -24,7 +24,7 @@
     </header>
     <main class="contact">
 
-        <form class="gform" action="POST" method="">
+        <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbz-1nMV7ev3OmqPnZlhrFZt-NLJv2ohVYvU0VNsbuikj35K2h8f4TZWxobNYZLBZRTi0A/exec">
             <fieldset>
                 <legend>Invitation Information</legend>
                 <label>First Name<input type="text" name="fname" id="fname" required></label>
@@ -37,10 +37,10 @@
             </fieldset>
             <fieldset class="mailing">
               <legend>Mailing Address</legend>
-              <label>Address Line 1<input type="text"></label>
-              <label>Address Line 2<input type="text"></label>
-              <label>City<input type="text"></label>
-              <label>State<input list="states" id="stateInput" maxlength="2"></label>
+              <label>Address Line 1<input name="add1" type="text"></label>
+              <label>Address Line 2<input name="add2" type="text"></label>
+              <label>City<input name="city" type="text"></label>
+              <label>State<input name="state" list="states" id="stateInput" maxlength="2"></label>
               <datalist id="states">
                 <option value="AL">AL</option>
                 <option value="AK">AK</option>
@@ -93,7 +93,7 @@
                 <option value="WI">WI</option>
                 <option value="WY">WY</option>
               </datalist>
-              <label>Zip Code<input type="text" minlength="5" maxlength="5"></label>
+              <label>Zip Code<input name="zip" type="text" minlength="5" maxlength="5"></label>
             </fieldset>
             <input type="submit" id="submitButton" value="Request Invite">
         </form>
