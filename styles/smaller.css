@@ -105,6 +105,9 @@
     section div h2{
         font-size: 18vw;
     }
+    #registry h2 {
+        font-size: 16vw;
+    }
     section div p {
         margin-top: 0;
         font-size: 6vw;
@@ -177,4 +180,5 @@
         font-size: 6vw;
         padding-bottom: 2.5vw;
     }
+
 }
