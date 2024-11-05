@@ -5,6 +5,7 @@
     --darkGreen: #2A4D14;
     --cream: #e3ceb4;
     
+    min-width: 300px;
 }
 .meow-script-regular {
     font-family: "Meow Script", cursive;
@@ -51,7 +52,7 @@ header nav{
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 93%;
     font-size: 3.5vw;
     top: 2vw;
 }
