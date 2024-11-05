@@ -13,7 +13,6 @@
   }
 .playwrite-gb-s {
     font-family: "Playwrite GB S", cursive;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
@@ -264,7 +263,6 @@ fieldset {
     text-decoration: none;
     color: white;
     transition: transform .2s;
-    border: 1vw solid --black;
 }
 #submitButton:hover {
     transform: scale(1.1);
@@ -297,4 +295,29 @@ fieldset {
 
 .contact .loading{
     display: none;
+}
+
+
+/* ----- deets page ----- */
+#notAvailable h2 {
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+#notAvailable h3 {
+    font-size: 2.5vw;
+    margin-top: 1vw;
+}
+#notAvailable section {
+    margin-bottom: 5vw;
+}
+#notAvailable div {
+    height: 30vw;
+}
+#notAvailable div a {
+    font-size: 4vw;
+}
+#notAvailable div h2 {
+    font-size: 4.75vw;
 }

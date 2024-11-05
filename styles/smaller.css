@@ -157,4 +157,24 @@
     .contact section div {
         grid-row: 2;
     }
+    
+    #notAvailable div {
+        grid-column: 1/3;
+        grid-row: auto;
+    }
+    #notAvailable h2 {
+        font-size: 6.5vw;
+    }
+    #notAvailable h3 {
+        margin-top: 3vw;
+        margin-bottom: 1vw;
+        font-size: 4.5vw;
+    }
+    #notAvailable div h2 {
+        font-size: 8vw;
+    }
+    #notAvailable div a{
+        font-size: 6vw;
+        padding-bottom: 2.5vw;
+    }
 }
