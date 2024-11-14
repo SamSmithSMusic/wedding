@@ -14,6 +14,7 @@ expand.addEventListener('click',() => {
 
 const mailing = document.querySelector(".mailing");
 let mailElements = document.querySelectorAll(".mailing input");
+let add2 = document.querySelector("#add2");
 const mailBox = document.querySelector("#physical");
 const galleryCard = document.querySelector("#gallery");
 
@@ -28,6 +29,8 @@ mailBox.addEventListener('change',(event) => {
         mailElements.forEach(element => {
             element.setAttribute("required","true");
         });
+        add2.setAttribute("required","false");
+        add2.value = "n/a";
         galleryCard.setAttribute("style","display: grid");
     }
     else if(!isChecked){
