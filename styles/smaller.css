@@ -181,4 +181,64 @@
         padding-bottom: 2.5vw;
     }
 
+
+    .details article {
+        border-radius: 8vw;
+    }
+    .details section {
+        border-radius: 4vw;
+        margin: 1vw 0 3vw 0;
+    }
+    .details section div {
+        grid-column: 1/3;
+    }
+    .details section img {
+        grid-column: 1/3;
+        border-radius: 4vw;
+    }
+    .details section a {
+        background-color: var(--lightGreen);
+        padding: 0;
+        display: inline;
+        border-radius: 4vw;
+    }
+    
+    .sec2 img{
+        grid-row: auto;
+    }
+
+    .details article h2 {
+        font-size: 18vw;
+    }
+    .details section h3 {
+        font-size: 13vw;
+    }
+    .details section p {
+        font-size: 6vw;
+    }
+    .details section a {
+        font-size: 6vw;
+    }
+    .details .directions div:first-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .details .directions p{
+        font-size: 6vw;
+        padding: 3vw 3vw 3vw 3vw;
+    }
+
+    #dress p{
+        font-size: 6vw;
+    }
+    #dress h3 {
+        font-size: 9vw;
+    }
+    #dress li {
+        font-size: 5.5vw;
+    }
+    
+    #itenerary p {
+        font-size: 5vw;
+    }
 }
