@@ -18,6 +18,8 @@
     font-style: normal;
   }
 
+
+
 body{
     background-color: var(--white);
     margin: 0;
@@ -218,10 +220,10 @@ form :is(label,input) {
     box-sizing: border-box;
 }
 form :is(label,input):required {
-    border-right: 1vw red solid;
+    border-right: 1vw rgb(226, 0, 0) solid;
 }
 form :is(label,input):valid {
-    border-right: 1vw rgb(0, 162, 46) solid;
+    border-right: 1vw var(--lightGreen) solid;
 }
 form input[type="submit"] {
     border: none;
@@ -299,7 +301,7 @@ fieldset {
 }
 
 
-/* ----- deets page ----- */
+/* ----- not available page ----- */
 #notAvailable h2 {
     text-align: center;
     font-size: 4vw;
@@ -321,4 +323,122 @@ fieldset {
 }
 #notAvailable div h2 {
     font-size: 4.75vw;
+}
+
+
+
+
+
+/* ------ Details Page ------ */
+.details article {
+    height: auto;
+    background-color: var(--darkGreen);
+    color: var(--white);
+    width: 80vw;
+    border-radius: 1vw;
+    margin: 3vw 0 3vw 0;
+    padding: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.details article h2 {
+    font-size: 10vw;
+    margin: 0 0 3vw 0;
+}
+
+.details section {
+    background-color: var(--lightGreen);
+    color: var(--black);
+    display: grid;
+    border-radius: .5vw;
+    margin: 1vw 1vw;
+}
+
+.details div {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 3vw;
+    height: auto;
+    justify-content: space-around;
+}
+.details img {
+    grid-column: 2;
+    width: 80%;
+    height: auto;
+}
+.sec2 div {
+    grid-column: 2;
+}
+.sec2 img {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.details section h3 {
+    font-size: 7vw;
+    width: 100%;
+    margin: 0 0 3vw 0;
+    display: flex;
+    justify-content: space-around;
+}
+.details section p {
+    font-size: 2.5vw;
+}
+.details section a {
+    text-decoration: underline;
+    color: var(--black);
+    background-color: var(--lightGreen);
+    padding: 0;
+    font-size: 2.5vw;
+}
+
+.details .directions {
+    display: flex;
+    flex-direction: column;
+}
+.details .directions a{
+    display: flex;
+    place-content: center;
+    background-color: var(--black);
+    padding: 2vw 1vw;
+}
+.details .directions p {
+    margin-top: 0;
+}
+
+#dress {
+    display: flex;
+    flex-direction: column;
+}
+
+#dress h3 {
+    font-size: 8vw;
+    margin: 0;
+}
+#dress p {
+    font-size: 4vw;
+    padding: 4vw;
+    margin: 0;
+}
+#dress ul {
+    padding:0 4vw;
+    margin: 0;
+    font-size: 3vw;
+    list-style: none;
+}
+#dress ul li {
+    margin: 3vw;
+}
+
+#itenerary {
+    display: flex;
+    flex-direction: column;
+}
+#itenerary p {
+    margin: 0;
+    padding: 0 2vw 2vw 2vw;
+    font-size: 3vw;
 }
