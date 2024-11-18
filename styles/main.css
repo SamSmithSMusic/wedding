@@ -295,6 +295,9 @@ fieldset {
 .contact h3 {
     text-align: center;
 }
+.contact h2 {
+    font-size: 6vw;
+}
 
 .contact .loading{
     display: none;
