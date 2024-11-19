@@ -146,6 +146,9 @@
     .contact form input:valid {
         border-right: 2vw green solid;
     }
+    .contact h2 {
+        font-size: 16vw;
+    }
     #stateInput {
         width: 15vw;
         font-size: 10vw;
