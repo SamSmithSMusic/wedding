@@ -295,9 +295,20 @@ fieldset {
 .contact h3 {
     text-align: center;
 }
+.contact h2 {
+    font-size: 6vw;
+}
+
+.contact aside {
+    width: 100%;
+}
 
 .contact .loading{
     display: none;
+}
+.contact a{
+    width: 80%;
+    font-size: 4vw;
 }
 
 
