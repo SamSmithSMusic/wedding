@@ -150,7 +150,7 @@
         font-size: 16vw;
     }
     #stateInput {
-        width: 15vw;
+        width: 40vw;
         font-size: 10vw;
     }
     #submitButton {
@@ -243,5 +243,10 @@
     
     #itenerary p {
         font-size: 5vw;
+    }
+
+    #rsvpresponse input {
+        width: 44px;
+        height: 44px
     }
 }

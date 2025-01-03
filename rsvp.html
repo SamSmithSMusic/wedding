@@ -27,28 +27,28 @@
   <header>
     <button>&#x2630;</button>
     <nav>
-      <a href="index.html">Home</a><a href="https://www.amazon.com/wedding/share/ForeverSmiths2025" target="_blank">Registry</a><a href="details.html">Details</a><a href="contact.html" class="active">Invites</a><a href="rsvp.html">RSVP</a><a href="gallery.html">Gallery</a>
+      <a href="index.html">Home</a><a href="https://www.amazon.com/wedding/share/ForeverSmiths2025" target="_blank">Registry</a><a href="details.html">Details</a><a href="contact.html">Invites</a><a href="rsvp.html" class="active">RSVP</a><a href="gallery.html">Gallery</a>
     </nav>
     <img srcset="images/hero-500.webp 500w,images/hero-800.webp 800w,images/hero.webp 1920w" sizes="(max-width: 500px) 500px ,(max-width: 800px) 800px, 1920px" loading="lazy" src="images/hero.webp" alt="Welcome Image Hero Image" width="3" height="2">      <h1 class="meow-script-regular">Maddie & Sam<br>Smith</h1>
     <a href="https://www.amazon.com/wedding/share/ForeverSmiths2025" target="_blank">Support Us</a>
   </header>
   <main class="contact">
 
-      <form class="gform" method="POST" action="">
+      <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxdYgJ7HE48FELRBJ1gUE3HALZjQRjASXk1yQPHGigyWp1nZvlcOQQ-AqBrSp72wnHrKg/exec">
             <fieldset>
               <legend>RSVP</legend>
+              <input type="text" name="honeypot" style="display:none;">
               <label>First Name<input type="text" name="fname" id="fname" required></label>
               <label>Last Name<input type="text" name="lname" id="lname" required></label>
-              <!-- TODO Scan for first and last name, if found, let them know theyre editing theyre previous RSVP. Maybe even load their data into phone and email -->
               <label>Phone<input type="tel" name="phone" id="phone"></label>
               <label>Email Address<input type="email" name="email" id="email" required></label>
               <label>Will you be in attendance?</label>
-              <label><input type="radio" name="rsvp" id="yes" value="yes">Yes!</label>
-              <label><input type="radio" name="rsvp" id="maybe" value="maybe">I'm not sure...</label>
-              <label><input type="radio" name="rsvp" id="no" value="no">I will not.</label>
+              <div id="rsvpresponse">
+                <label><input type="radio" name="rsvp" id="yes" value="yes" required>Yes!</label>
+                <label><input type="radio" name="rsvp" id="maybe" value="maybe">I'm not sure...</label>
+                <label><input type="radio" name="rsvp" id="no" value="no">I will not.</label>
+              </div>
               <!-- TODO Figure out how to make this required -->
-              <label id="dynamicRSVP"></label> 
-              <!-- TODO Add dynamic message here^^ -->
               <label>If you have NOT yet given us your address, but would still like to recieve an invitation, what invitations would you like?<br>(Select all that apply)</label>
               <label><input type="checkbox" name="invites" id="digital" value="digital">Digital</label>
               <label><input type="checkbox" name="invites" id="physical" value="physical">Physical</label>
@@ -114,10 +114,10 @@
             <label>Zip Code<input name="zip" type="text" minlength="5" maxlength="5"></label>
           </fieldset>
           <h3 class="loading">Processing Information...</h3>
-          <input type="submit" id="submitButton" value="Request Invite">
+          <input type="submit" id="submitButton" value="Send RSVP">
       </form>
       <div class="thankyou_message">
-        <h3>We'll have that invitation to you soon! Thank You!</h3>
+        <h3>RSVP Submitted, thank you!</h3>
       </div>
       <aside>
         <section id="registry">

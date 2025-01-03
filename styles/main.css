@@ -175,6 +175,11 @@ section div a{
     width: 22vw;
     margin: -1vw 0 0 0;
 }
+
+
+
+
+
 #rsvp {
     height: auto;
     background-color: var(--black);
@@ -200,6 +205,17 @@ section div a{
     padding: 1vw 6vw;
     font-size: 5vw;
     border-radius: 1vw;
+}
+.contact input[type="radio"]{
+    width: 5vw;
+    height: 5vw
+}
+#rsvpresponse label{
+    display: flex;
+    align-items: center;
+}
+#rsvpresponse input {
+    display: inline;
 }
 
 
@@ -248,7 +264,7 @@ form input {
     border-radius: 1vw;
 }
 #stateInput {
-    width: 6vw;
+    width: 15vw;
 }
 
 fieldset {
