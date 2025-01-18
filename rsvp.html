@@ -33,8 +33,14 @@
     <a href="https://www.amazon.com/wedding/share/ForeverSmiths2025" target="_blank">Support Us</a>
   </header>
   <main class="contact">
-
-      <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxdYgJ7HE48FELRBJ1gUE3HALZjQRjASXk1yQPHGigyWp1nZvlcOQQ-AqBrSp72wnHrKg/exec">
+    <div class="passProtect" id="rsvp">
+      <h2>Welcome!</h2>
+      <h3>Here to RSVP?</h3>
+      <label>Enter the RSVP code from your invitation to unlock the form: <br><input type="password" id="rsvpPass" maxlength="4"><br></label>
+      <p>Invalid Code!!</p>
+      <button>Validate</button>
+    </div>
+      <form class="gform" id="rsvpform" method="POST" action="https://script.google.com/macros/s/AKfycbxdYgJ7HE48FELRBJ1gUE3HALZjQRjASXk1yQPHGigyWp1nZvlcOQQ-AqBrSp72wnHrKg/exec">
             <fieldset>
               <legend>RSVP</legend>
               <input type="text" name="honeypot" style="display:none;">
@@ -48,6 +54,7 @@
                 <label><input type="radio" name="rsvp" id="maybe" value="maybe">I'm not sure...</label>
                 <label><input type="radio" name="rsvp" id="no" value="no">I will not.</label>
               </div>
+              <label class="plusOne">If you're bringing a plus one, who is it?<input type="text" name="plusOne" id="plusOne"></label>
               <!-- TODO Figure out how to make this required -->
               <label>If you have NOT yet given us your address, but would still like to recieve an invitation, what invitations would you like?<br>(Select all that apply)</label>
               <label><input type="checkbox" name="invites" id="digital" value="digital">Digital</label>

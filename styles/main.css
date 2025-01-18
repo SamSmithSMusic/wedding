@@ -218,7 +218,59 @@ section div a{
     display: inline;
 }
 
+.plusOne {
+    display: none;
+}
 
+input[type="radio"]:checked {
+    accent-color:var(--lightGreen);
+}
+
+#rsvpform {
+    display: none;
+}
+
+#rsvp.passProtect {
+    background-color:#11160D;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 37vw;
+}
+#rsvp.passProtect h2 {
+    font-size: 8vw;
+    text-align: center;
+    margin-bottom: -3vw;
+}
+.passProtect h3 {
+    font-size: 5vw;
+    margin: 0;
+    margin-bottom: 2vw;
+}
+.passProtect label {
+    font-size: 3vw;
+    text-align: center;
+    display: block;
+    margin-bottom: 2vw;
+}
+.passProtect p{
+    text-align: center;
+    display: none;
+}
+.passProtect input {
+    min-height: 44px;
+    width: 125px;
+    font-size: 50px;
+    margin-top: 1.5vw;
+}
+.passProtect button {
+    min-height: 44px;
+    height: 5vw;
+    width: 70%;
+    font-size: 3vw;
+    align-self: center;
+    background-color:#82a777;
+    border: 0;
+}
 
 /* ---- Form Styles ----- */
 form {

@@ -12,6 +12,43 @@ expand.addEventListener('click',() => {
     }
 });
 
+// rsvp PASS lock
+
+let passblock = document.querySelector('.passProtect');
+let rsvpform = document.querySelector('#rsvpform');
+let password = document.querySelector('.passProtect input');
+let validate = document.querySelector('.passProtect button');
+let error = document.querySelector('.passProtect p');
+
+validate.addEventListener('click', () => {
+    if (password.value == '0620') {
+        passblock.setAttribute('style','display: none;');
+        rsvpform.setAttribute('style','display: block;');
+    }
+    else {
+        error.setAttribute('style','display: block;');
+    }
+})
+
+// rsvp +1 button toggle
+
+let plusone = document.querySelector('.plusOne');
+let rsvpButts = document.querySelectorAll('input[name="rsvp"]');
+
+rsvpButts.forEach((button) => {
+    button.addEventListener('change', (button) => {
+        if (button.target.value == "yes" || button.target.value == "maybe") {
+            plusone.setAttribute('style','display: block');
+        }
+        else {
+            plusone.setAttribute('style','display: none')
+        }
+    })
+})
+
+
+// Mailing button toggle
+
 const mailing = document.querySelector(".mailing");
 let mailElements = document.querySelectorAll(".mailing input");
 let add2 = document.querySelector("#add2");

@@ -102,6 +102,35 @@
         align-items: center; */
     }
 
+    #rsvp.passProtect {
+        margin: 5vw 0 5vw 0;
+    }
+    #rsvp.passProtect h2 {
+        font-size: 13vw;
+    }
+    .passProtect h3 {
+        font-size: 7vw;
+    }
+    .passProtect label {
+        padding: 0 5vw 5vw 5vw;
+        font-size: 4vw;
+        margin: 0;
+    }
+    .passProtect input {
+        height: 7vw;
+        margin-top: 4vw;
+    }
+    .passProtect button {
+        margin-bottom: 2vw;
+        font-size: 8vw;
+    }
+
+
+
+
+
+
+
     section div h2{
         font-size: 18vw;
     }
