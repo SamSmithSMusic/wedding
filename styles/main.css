@@ -270,6 +270,7 @@ input[type="radio"]:checked {
     align-self: center;
     background-color:#82a777;
     border: 0;
+    color: var(--black);
 }
 
 /* ---- Form Styles ----- */
