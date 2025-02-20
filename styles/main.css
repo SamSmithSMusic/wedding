@@ -186,7 +186,7 @@ section div a{
     color: var(--white);
     width: 88%;
     border-radius: 1vw;
-    margin-bottom: 3vw;
+    margin: 2vw 0 1vw 0;
     padding: 2.5vw;
 }
 #rsvp h2 {
