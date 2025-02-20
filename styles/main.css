@@ -186,7 +186,7 @@ section div a{
     color: var(--white);
     width: 88%;
     border-radius: 1vw;
-    margin-bottom: 3vw;
+    margin: 2vw 0 1vw 0;
     padding: 2.5vw;
 }
 #rsvp h2 {
@@ -517,8 +517,71 @@ fieldset {
     display: flex;
     flex-direction: column;
 }
-#itenerary p {
+
+.details .itinItem {
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    padding: 0 2vw 2vw 2vw;
-    font-size: 3vw;
+    padding: 1vw 1vw 1vw 1vw;
+    width: 97.5%;
+    border-radius: 0;
+}
+.details .itemInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+.details .itinItem h4{
+    font-size: 4.5vw;
+    margin: 0;
+    margin-right: auto;
+}
+.details .itinItem h5 a {
+    font-size: 5vw;
+    margin:0 1vw 0 0;
+}
+.details .itinItem h5 {
+    font-size: 5vw;
+    margin:0 1vw 0 0;
+}
+
+.details .itinItem p {
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease, padding-bottom .5s ease;
+    padding: 0;
+
+    font-size: 4vw;
+    margin: 0;
+}
+.details .itinItem p.show{
+    max-height: 1000px;
+    padding-bottom: 2vw;
+}
+
+.details .itinItem:nth-of-type(odd)>.itemInfo{
+    background-color: var(--darkGreen);
+    color: var(--white);
+}
+.itinItem:nth-of-type(odd){
+    background-color: var(--darkGreen);
+    color: var(--white);
+}
+.itinItem:nth-of-type(odd)>.itemInfo>h5>a{
+    background-color: var(--darkGreen);
+    color: var(--white);
+}
+.itinItem:last-of-type{
+    border-radius: 1vw;
+}
+b {
+    display: inline-block;
+    transition: transform 0.5s ease;
+    margin-right: 1vw;
+}
+.rotate {
+    transform: rotate(90deg);
 }
