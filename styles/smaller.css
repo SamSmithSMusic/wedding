@@ -293,7 +293,7 @@
 
         max-height: 0;
         overflow: hidden;
-        transition: max-height .5s ease, padding-bottom .5s ease;
+        transition: max-height .3s ease, padding-bottom .3s ease;
         padding: 0;
 
         font-size: 4vw;
@@ -321,7 +321,7 @@
     }
     b {
         display: inline-block;
-        transition: transform 0.5s ease;
+        transition: transform 0.3s ease;
         margin-right: 1vw;
     }
     .rotate {
