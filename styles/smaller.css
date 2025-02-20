@@ -324,9 +324,6 @@
         transition: transform 0.5s ease;
         margin-right: 1vw;
     }
-
-    
-    
     .rotate {
         transform: rotate(90deg);
     }
