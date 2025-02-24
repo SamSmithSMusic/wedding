@@ -28,7 +28,7 @@ header {
     left: 0;
     display: grid;
     align-items: center;
-    background-color: #2A4D14;
+    background: linear-gradient(to top, rgba(0,0,0,2%) 0%, rgba(42,77,20,80%) 20%, #2a4d14 100%);
 }
 header button {
     display: none;
@@ -121,50 +121,60 @@ header>a{
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 30%;
     z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fly 0s ease-in forwards;
 }
 
 .inv-flip.move {
-    animation: deskFly 2s ease-in .5s forwards;
-    transform-origin: left center;
+    animation: fly 3s ease-in 1s forwards reverse;
 }
 
+
+
 .inv-flip .inv-back {
-    transform: rotateX(180deg) rotate(-90deg);
+    transform: rotateY(180deg);
     backface-visibility: hidden;
     transition: transform 1s;
 }
 .inv-flip .inv-front {
-    transform: rotateX(0deg) rotate(-90deg);
+    transform: rotateY(0deg);
     backface-visibility: hidden;
     transition: transform 1s;
 }
 
-.flip.inv-back{
-    transform: rotateX(0deg) rotate(-90deg);
+.stright.inv-back{
+    transform: rotateY(180deg);
+}
+.stright.inv-front{
+    transform: rotateY(0deg);
 }
 
-.flip.inv-front{
-    transform: rotateX(-180deg) rotate(-90deg);
+.straight.flip.inv-back{
+    transform: rotateY(0deg);
+}
+
+.straight.flip.inv-front{
+    transform: rotateY(-180deg);
 }
 
 .inv-flip img {
     box-sizing: border-box;
     height: auto;
-    width: 39%;
+    width: 90%;
     position: absolute;
-    transform: rotate(-90deg);
     z-index: 2;
+
+    
 }
 
 .env {
     background-color: #2A4D14;
     height: 25%;
     width: 60%;
-    margin-bottom: 5%;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,6 +200,7 @@ header>a{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 3;
 }   
 
 .envTopIMG {
@@ -201,6 +212,10 @@ header>a{
 /* env top animation */
 .envTopIMG.openTop {
     transform: rotateX(180deg);
+    position: relative;
+    z-index: 1;
+}
+.envFold.openTop {
     z-index: 1;
 }
 
@@ -231,63 +246,76 @@ button {
     width: 40%;
     border: 2px solid white;
     color: white;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 @media (max-width: 800px) {
 
-    header a{
-        font-size: 20px;
+    header{
+        height: 12vw;
+    }
+    header nav{
+        font-size: 5vw;
     }
 
     .inv-flip {
         box-sizing: border-box;
         height: 100%;
         width: 100%;
-        position: absolute;
-        top: 0;
-        left: 30%;
         z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fly 0s ease-in forwards;
     }
 
     .inv-flip.move {
-        animation: fly 2s ease-in .5s forwards;
-        transform-origin: left center;
+        animation: fly 3s ease-in 1s forwards reverse;
     }
 
+
+
     .inv-flip .inv-back {
-        transform: rotateX(180deg) rotate(-90deg);
+        transform: rotateY(180deg);
         backface-visibility: hidden;
         transition: transform 1s;
     }
     .inv-flip .inv-front {
-        transform: rotateX(0deg) rotate(-90deg);
+        transform: rotateY(0deg);
         backface-visibility: hidden;
         transition: transform 1s;
     }
 
-    .flip.inv-back{
-        transform: rotateX(0deg) rotate(-90deg);
+    .stright.inv-back{
+        transform: rotateY(180deg);
+    }
+    .stright.inv-front{
+        transform: rotateY(0deg);
     }
 
-    .flip.inv-front{
-        transform: rotateX(-180deg) rotate(-90deg);
+    .straight.flip.inv-back{
+        transform: rotateY(0deg);
+    }
+
+    .straight.flip.inv-front{
+        transform: rotateY(-180deg);
     }
 
     .inv-flip img {
         box-sizing: border-box;
         height: auto;
-        width: 39%;
+        width: 90%;
         position: absolute;
-        transform: rotate(-90deg);
         z-index: 2;
+
+        
     }
     
     .env {
         background-color: #2A4D14;
         height: 25%;
         width: 60%;
-        margin-bottom: 5%;
+        margin-bottom: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -313,6 +341,7 @@ button {
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 3;
     }   
 
     .envTopIMG {
@@ -324,6 +353,10 @@ button {
     /* env top animation */
     .envTopIMG.openTop {
         transform: rotateX(180deg);
+        position: relative;
+        z-index: 1;
+    }
+    .envFold.openTop {
         z-index: 1;
     }
 
@@ -380,38 +413,36 @@ button {
 
 @keyframes fly {
     0% {
-        z-index: 2;
+        transform: translate(0%);
+        z-index: 5;
     }
-    
-    50% {
+    40% {
+        transform: scale(.3) translateY(75%); 
         z-index: 4;
     }
-
     70% {
-        transform: translateY(-60vw) translateX(-60px) rotate(50deg) scale(2)
+        z-index: 3;
     }
-
     100% {
-        transform: translateY(-60vh) translateX(-25vw) rotate(90deg) scale(3.5);
-        z-index: 5;
+        transform:  scale(.3) translateY(125%) rotate(-90deg);
+        z-index: 1;
     }
 }
 
 @keyframes deskFly {
     0% {
-        z-index: 2;
+        transform: translate(0%);
+        z-index: 5;
     }
-    
-    50% {
+    40% {
+        transform: scale(.3) translateY(75%); 
         z-index: 4;
     }
-
     70% {
-        transform: translateY(-150%) rotate(50deg) scale(2)
+        z-index: 3;
     }
-
     100% {
-        transform: translateY(-250%) translateX(2%) rotate(90deg) scale(2.75);
-        z-index: 5;
+        transform:  scale(.3) translateY(125%) rotate(-90deg);
+        z-index: 1;
     }
 }
