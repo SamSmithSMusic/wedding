@@ -8,6 +8,16 @@ html, body {
     align-items: center;
     background-color: #e3ceb4;
 }
+.meow-script-regular {
+    font-family: "Meow Script", cursive;
+    font-weight: 600;
+    font-style: normal;
+  }
+.playwrite-gb-s {
+    font-family: "Playwrite GB S", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 a {
     text-decoration: none;
@@ -28,7 +38,7 @@ header {
     left: 0;
     display: grid;
     align-items: center;
-    background: linear-gradient(to top, rgba(0,0,0,2%) 0%, rgba(42,77,20,80%) 20%, #2a4d14 100%);
+    background-color: #2A4D14;
 }
 header button {
     display: none;
@@ -125,11 +135,11 @@ header>a{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fly 0s ease-in forwards;
+    transform: scale(.3) translateY(125%) rotate(-90deg);
 }
 
 .inv-flip.move {
-    animation: fly 3s ease-in 1s forwards reverse;
+    animation: revfly 2s ease-out 1s forwards;
 }
 
 
@@ -259,6 +269,7 @@ button {
     }
 
     .inv-flip {
+        will-change: transform;
         box-sizing: border-box;
         height: 100%;
         width: 100%;
@@ -266,11 +277,12 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
+        transform: scale(.3) translateY(125%) rotate(-90deg);
         animation: fly 0s ease-in forwards;
     }
 
     .inv-flip.move {
-        animation: fly 3s ease-in 1s forwards reverse;
+        animation: revfly 2s ease-out 1s forwards;
     }
 
 
@@ -392,24 +404,25 @@ button {
 
 }
 
-/* @keyframes fly {
+@keyframes revfly {
     0% {
-        z-index: 2;
+        transform:  scale(.3) translateY(125%) rotate(-90deg);
+        z-index: 3;
+        
     }
-    
-    50% {
+    20% {
+        z-index: 3;
+        
+    }
+    60% {
+        transform: scale(.3) translateY(30%); 
         z-index: 4;
     }
-
-    70% {
-        transform: translateY(-150%) translateX(-30%) rotate(50deg) scale(2)
-    }
-
     100% {
-        transform: translateY(-230%) translateX(-45%) rotate(90deg) scale(3.5);
+        transform: translate(0%);
         z-index: 5;
     }
-} */
+}
 
 @keyframes fly {
     0% {
@@ -431,18 +444,20 @@ button {
 
 @keyframes deskFly {
     0% {
-        transform: translate(0%);
-        z-index: 5;
+        transform:  scale(.3) translateY(125%) rotate(-90deg);
+        z-index: 3;
+        
     }
-    40% {
-        transform: scale(.3) translateY(75%); 
+    30% {
+        z-index: 3;
+        
+    }
+    60% {
+        transform: scale(.3) translateY(30%); 
         z-index: 4;
     }
-    70% {
-        z-index: 3;
-    }
     100% {
-        transform:  scale(.3) translateY(125%) rotate(-90deg);
-        z-index: 1;
+        transform: translate(0%);
+        z-index: 5;
     }
 }
