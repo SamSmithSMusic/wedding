@@ -50,6 +50,7 @@ function moveInvite() {
 
 // opening lid 
 function openLid() {
+    env.classList.remove('wiggle');
     lid.classList.add('openTop');
     lidCont.classList.add('openTop');
 }

@@ -30,7 +30,7 @@ a:hover {
 
 header {
     width: 100%;
-    height: 8vw;
+    height: 5vw;
     min-height: 44px;
     z-index: 4;
     position: absolute;
@@ -52,8 +52,8 @@ header nav{
     justify-content: space-between;
     align-items: center;
     width: 93%;
-    font-size: 3.5vw;
-    top: 2vw;
+    font-size: 2vw;
+    top: 1vw;
 }
 header img {
     grid-column: 1/6;
@@ -131,15 +131,15 @@ header>a{
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    z-index: 0;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(.3) translateY(125%) rotate(-90deg);
+    transform: scale(.2) translateY(175%) rotate(-90deg);
 }
 
 .inv-flip.move {
-    animation: revfly 2s ease-out 1s forwards;
+    animation: deskFly 2s ease-out forwards;
 }
 
 
@@ -175,7 +175,7 @@ header>a{
     height: auto;
     width: 90%;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
 
     
 }
@@ -191,6 +191,10 @@ header>a{
     position: absolute;
     padding: 0;
     border: none;
+}
+
+.env.wiggle {
+    animation: wiggle 1.5s ease-in-out infinite; 
 }
 
 .envFront {
@@ -223,10 +227,10 @@ header>a{
 .envTopIMG.openTop {
     transform: rotateX(180deg);
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 .envFold.openTop {
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -273,16 +277,16 @@ button {
         box-sizing: border-box;
         height: 100%;
         width: 100%;
-        z-index: 0;
+        z-index: 1;
         display: flex;
         justify-content: center;
         align-items: center;
         transform: scale(.3) translateY(125%) rotate(-90deg);
-        animation: fly 0s ease-in forwards;
+        /* animation: fly 0s ease-in forwards; */
     }
 
     .inv-flip.move {
-        animation: revfly 2s ease-out 1s forwards;
+        animation: revfly 2s ease-out forwards;
     }
 
 
@@ -318,7 +322,7 @@ button {
         height: auto;
         width: 90%;
         position: absolute;
-        z-index: 2;
+        z-index: 1;
 
         
     }
@@ -334,6 +338,10 @@ button {
         position: absolute;
         padding: 0;
         border: none;
+    }
+
+    .env.wiggle {
+        animation: wiggle 1.5s ease-in-out infinite; 
     }
     
     .envFront {
@@ -366,10 +374,10 @@ button {
     .envTopIMG.openTop {
         transform: rotateX(180deg);
         position: relative;
-        z-index: 1;
+        z-index: 2;
     }
     .envFold.openTop {
-        z-index: 1;
+        z-index: 2;
     }
 
 
@@ -407,10 +415,11 @@ button {
 @keyframes revfly {
     0% {
         transform:  scale(.3) translateY(125%) rotate(-90deg);
-        z-index: 3;
+        z-index: 1;
         
     }
-    20% {
+    15% {
+
         z-index: 3;
         
     }
@@ -424,7 +433,30 @@ button {
     }
 }
 
-@keyframes fly {
+@keyframes wiggle {
+    0% {
+        /* transform: translate(0) rotate(0) scale(1); */
+        z-index: 3;
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    /* 50% {
+        transform: rotate(0) translate(0) scale(1);
+    } */
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        z-index: 3;
+    }
+}
+
+/* @keyframes fly {
     0% {
         transform: translate(0%);
         z-index: 5;
@@ -441,10 +473,10 @@ button {
         z-index: 1;
     }
 }
-
+*/
 @keyframes deskFly {
     0% {
-        transform:  scale(.3) translateY(125%) rotate(-90deg);
+        transform: scale(.2) translateY(175%) rotate(-90deg);
         z-index: 3;
         
     }
@@ -453,7 +485,7 @@ button {
         
     }
     60% {
-        transform: scale(.3) translateY(30%); 
+        transform: scale(.2) translateY(30%); 
         z-index: 4;
     }
     100% {
